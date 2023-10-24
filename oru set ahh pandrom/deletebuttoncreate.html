@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="type">
+    <button  onclick="add()">submit</button>
+    <ul id="listie">
+        <li>hello
+        <button id="delete" onclick="deleteItem(event)">delete</button>
+
+        </li>
+    </ul>
+    
+    <script>
+        var type = document.getElementById("type")
+        var ul = document.getElementById("listie")
+        function add(){
+            var listenItem = document.createElement("li")
+            listenItem.innerHTML = type.value +"<button onclick='deleteItem(event)'>delete</button>"
+            ul.append(listenItem)
+        }
+        function deleteItem(event){
+            event.target.parentElement.remove()
+        }
+
+    </script>
+</body>
+</html>

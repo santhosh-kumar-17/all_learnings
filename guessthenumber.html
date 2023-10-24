@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="get">
+    <button id="clickk" onclick="guess()">guess</button>
+    <h1>Lets see Whether you Win</h1>
+    <h2 id="produce">No ,you'll Lose</h2>
+    <script>
+       
+        function guess(){
+            var first = document.getElementById("get")
+        one = parseInt(first.value)
+        var ans = document.getElementById("produce")
+        
+            var valuee = Math.random();
+            var guessed_number = Math.floor(valuee*10)+1
+            console.log(guessed_number)
+            if(guessed_number==one){
+                ans.textContent = "You Win"
+                alert("You Won")
+            }
+            else{
+                ans.textContent = "You Lose"
+
+            }
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="num1" placeholder="enter num1"></input>
+    <input id="num2" placeholder="enter num2"></input>
+    <button onclick="sum()">total</button>
+    <h1>result =</h1>
+    <h2 id="result"></h2>
+    <script>
+        function sum (){
+            var one = document.getElementById("num1")
+            first=parseFloat(one.value);
+            var two = document.getElementById("num2")
+            second=parseFloat(two.value);
+            var ans=first+second;
+            console.log(first+second);
+            var resultdom = document.getElementById("result")
+            resultdom.textContent=ans;
+        }
+    </script>
+</body>
+</html>
